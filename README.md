@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/DavideAllavena/jarql.svg?branch=master)](https://travis-ci.org/DavideAllavena/jarql)
 
+
 # JARQL
 SPARQL construct queries on JSON files
 
