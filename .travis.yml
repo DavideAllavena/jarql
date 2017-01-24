@@ -1,13 +1,13 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 sudo: false
-script: mvn clean verify
-
-#deploy:
-#  provider: releases
-#  api_key: "GITHUB OAUTH TOKEN"
-#  file: ""
-#  skip_cleanup: true
-#  on:
-#    tags: true
+script: mvn clean install 
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: QdlK0Z4tfFkATOC1+KSjo5fsOc8ZkeZ6U7Jg11760OgIjenhI1Hdmq95BDtE2RYYI1f75mF61W4TUXGLnirbPh48GtKcSc1J8PdPvDT3zFwqxNIeEkt6l1UmcBTXgtJijP698Cms3eZbymkkF74Gdq2+i5sCXoKeGjTE8TCs51lWppNXkf7MjPwE16Vgu6Hnh4Ot5QMp+CiU8+d/P/PsE6gANBjUrOWWW3RkwYDD6SxxPk+SDcONvrqzV00Z12ziUiP89zIDRl1u/bS4FkQmxdouprlzHGd+VLCtt0N/8DCVdPiF+kwTq16Fy2KvJJ6nGan6JbemF++TD+X49kWASWWpzH2dKFOgpZMTX4slyExwaOQB/tOLYFSmm4mTZPdogrmlHWNiP7Us2nruwMnJzCAiVPhsb3EFjPh12+Yyb2ezozVsMt6kbLmy0zFxd71D9IXaczyM+fb+faTA2pQvWutFiKhfCnQCn0ww9xVE8SE2X1dMhGizchndGNJH0QfXc7fUMZagB9ruy/kV1dCbNPTkCT0CwMN44cy+bwyE53bo780Hr+rlGBbDmsg9Nu9P+hv31uTRXROJMgvxg3b+jq4saz+0ZLVQtNGpSwk/BR1E9QW16EDrHR7EjEQ3rIcpzjKo7eZArP3KwDHjeXZDUI94eHFimrxlnug3wMAdFyQ=
+  file: "target/jarql-1.0-SNAPSHOT.jar"
+  on:
+    repo: DavideAllavena/jarql
